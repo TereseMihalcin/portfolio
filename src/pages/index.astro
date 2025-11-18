@@ -5,12 +5,103 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/me.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Terese Mihalcin Professional Portfolio</title>
+
+		<!-- Bootstrap 5 -->
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+		
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<div class="text-center mt-5 d-flex justify-content-center align-items-baseline gap-3">
+			<h1>Terese Mihalcin</h1>
+		</div>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-6 text-center">
+					<p>Hi there, my name is Terese. I'm a software developer at Creative Circle Media Solutions. I'm passionate about building practical, scalable websites and web technologies that make people happy.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col text-center">
+					<!-- todo: custom tooltips for fun -->
+					<a href="https://www.linkedin.com/in/teresemihalcin" target="_blank"><span class="streamline-pixel--logo-linkedin"></span></a>
+					<a href="https://github.com/teresemihalcin" target="_blank"><span class="pixel--github"></span></a>
+					<a href="https://blog.teresemihalcin.com" target="_blank"><span class="streamline-pixel--internet-network-www"></span></a>
+				</div>
+			</div>
+		</div>
+		
 	</body>
+
+	<style>
+
+		@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+		body {
+			background-color: #e9dd65;
+		}
+		body h1 {
+			font-family: 'Barrio';
+			font-size: 5em;
+		}
+		body h2 {
+			font-family: 'Barrio';
+			font-size: 3.5em;
+		}
+		body p {
+			font-family: 'IBM Plex Serif', serif;
+			font-size: 1.2em;
+		}
+		.streamline-pixel--logo-linkedin {
+		display: inline-block;
+		width: 45px;
+		height: 45px;
+		--svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23000' d='M30.47 3.05H32v25.9h-1.53Zm-1.52 25.9h1.52v1.53h-1.52Zm0-27.43h1.52v1.53h-1.52Zm-1.53 3.05h1.53v22.86h-1.53ZM3.04 30.48h25.91V32H3.04Zm1.53-3.05h22.85v1.52H4.57Zm18.28-12.19h-1.52v-1.53h-3.05v1.53h-1.52v-1.53h-3.05v9.15h3.05v-4.57h1.52v-1.53h1.53v1.53h1.52v4.57h3.05v-6.1h-1.53zM7.61 13.71h3.05v9.15H7.61Zm0-4.57h3.05v3.05H7.61ZM4.57 3.05h22.85v1.52H4.57ZM3.04 0h25.91v1.52H3.04Zm0 4.57h1.53v22.86H3.04ZM1.52 28.95h1.52v1.53H1.52Zm0-27.43h1.52v1.53H1.52ZM0 3.05h1.52v25.9H0Z'/%3E%3C/svg%3E");
+		background-color: currentColor;
+		-webkit-mask-image: var(--svg);
+		mask-image: var(--svg);
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		-webkit-mask-size: 100% 100%;
+		mask-size: 100% 100%;
+		color:#6571e9;
+		}
+
+		.streamline-pixel--internet-network-www {
+		display: inline-block;
+		width: 45px;
+		height: 45px;
+		--svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23000' d='M30.47 9.14h-1.52v1.53H25.9V9.14h-1.52v1.53H7.62V9.14H6.09v1.53H3.05V9.14H1.52v3.05H0v7.62h1.52v3.05h1.53v-1.53h3.04v1.53h1.53v-1.53h16.76v1.53h1.52v-1.53h3.05v1.53h1.52v-3.05H32v-7.62h-1.53Zm-19.81 9.14H9.14v1.53H7.62v-1.53H6.09v1.53H4.57v-1.53H3.05v-4.57h1.52v4.57h1.52v-3.04h1.53v3.04h1.52v-4.57h1.52Zm9.15 0h-1.53v1.53h-1.52v-1.53h-1.52v1.53h-1.53v-1.53h-1.52v-4.57h1.52v4.57h1.53v-3.04h1.52v3.04h1.52v-4.57h1.53Zm9.14 0h-1.52v1.53H25.9v-1.53h-1.52v1.53h-1.53v-1.53h-1.52v-4.57h1.52v4.57h1.53v-3.04h1.52v3.04h1.53v-4.57h1.52Z'/%3E%3Cpath fill='%23000' d='M27.43 22.86h1.52v3.04h-1.52Zm0-16.77h1.52v3.05h-1.52ZM25.9 25.9h1.53v1.53H25.9Zm0-21.33h1.53v1.52H25.9Zm0 3.05V6.09h-4.57V4.57h-1.52v3.05h3.04v1.52h1.53V7.62zm-3.05 19.81h3.05v1.52h-3.05Z'/%3E%3Cpath fill='%23000' d='M22.85 24.38h-3.04v3.05h1.52V25.9h4.57v-1.52h-1.52v-1.52h-1.53zm0-21.33h3.05v1.52h-3.05Zm-3.04 25.9h3.04v1.53h-3.04Zm0-27.43h3.04v1.53h-3.04Zm-1.53 25.91h1.53v1.52h-1.53Zm0-24.38h1.53v1.52h-1.53Zm0 25.9h-1.52v1.53h-1.52v-1.53h-1.53v1.53h-1.52V32h7.62v-1.52h-1.53zM12.19 7.62h7.62v1.52h-7.62Zm0 15.24h7.62v1.52h-7.62Zm1.52-19.81h1.53V1.52h1.52v1.53h1.52V1.52h1.53V0h-7.62v1.52h1.52zm-1.52 24.38h1.52v1.52h-1.52Zm0-24.38h1.52v1.52h-1.52Zm-3.05 25.9h3.05v1.53H9.14Zm0-27.43h3.05v1.53H9.14ZM6.09 27.43h3.05v1.52H6.09Z'/%3E%3Cpath fill='%23000' d='M9.14 7.62h3.05V4.57h-1.53v1.52H6.09v1.53h1.53v1.52h1.52zM6.09 3.05h3.05v1.52H6.09Zm0 21.33v1.52h4.57v1.53h1.53v-3.05H9.14v-1.52H7.62v1.52zM4.57 25.9h1.52v1.53H4.57Zm0-21.33h1.52v1.52H4.57ZM3.05 22.86h1.52v3.04H3.05Zm0-16.77h1.52v3.05H3.05Z'/%3E%3C/svg%3E");
+		background-color: currentColor;
+		-webkit-mask-image: var(--svg);
+		mask-image: var(--svg);
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		-webkit-mask-size: 100% 100%;
+		mask-size: 100% 100%;
+		color:#6571e9;
+		}
+
+		.pixel--github {
+		display: inline-block;
+		width: 45px;
+		height: 45px;
+		--svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M23 9v6h-1v2h-1v2h-1v1h-1v1h-1v1h-2v1h-1v-5h-1v-1h1v-1h2v-1h1v-1h1V9h-1V6h-2v1h-1v1h-1V7h-4v1H9V7H8V6H6v3H5v5h1v1h1v1h2v2H7v-1H6v-1H4v1h1v2h1v1h3v3H8v-1H6v-1H5v-1H4v-1H3v-2H2v-2H1V9h1V7h1V5h1V4h1V3h2V2h2V1h6v1h2v1h2v1h1v1h1v2h1v2z'/%3E%3C/svg%3E");
+		background-color: currentColor;
+		-webkit-mask-image: var(--svg);
+		mask-image: var(--svg);
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		-webkit-mask-size: 100% 100%;
+		mask-size: 100% 100%;
+		color:#6571e9;
+		}
+	</style>
 </html>
