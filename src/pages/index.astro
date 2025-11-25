@@ -120,12 +120,9 @@ import '../styles/global.css';
 		
 		:root {
 			--accent: #6571e9;
-			--yellow: #e9dd65;
-			--background: #e9dd65;
+			--light-box: #ede27c;
 			--light: #f8f4cc;
-		}
-		body {
-			background-color: #e9dd65;
+			--dark-box: #555;
 		}
 		body.light {
             background-color: #f8f4cc;
@@ -138,6 +135,9 @@ import '../styles/global.css';
 				border: 0px;
 				width: 15rem;
 			}
+			img {
+				border: 15px solid var(--light-box);
+			}
         }
         body.dark {
             background-color: #333;
@@ -149,6 +149,9 @@ import '../styles/global.css';
 				background: #555;
 				border: 0px;
 				width: 15rem;
+			}
+			img {
+				border: 15px solid var(--dark-box);
 			}
         }
 		a {
