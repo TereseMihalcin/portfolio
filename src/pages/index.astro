@@ -18,7 +18,7 @@ import '../styles/global.css';
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 	</head>
-	<body class="">
+	<body onload="noTransition()" class="">
 		<div class="container mt-3">
 			<div class="row justify-content-left mb-1">
 				<div class="col-6 offset-1">
@@ -41,60 +41,76 @@ import '../styles/global.css';
 					<p>Hi there, I'm a software developer, working at a small software company building websites and software applications for newspapers and media companies. I collaborate with a small team to improve and expand our CMS and supporting apps. I am passionate about learning modern development strategies, and building new projects in my free time.</p>
 				</div>
 				<div class="col-4 ms-3">
-						<img src="/real-me.jpg" alt="Picture of Terese Mihalcin" class="">
+						<img src="/real-me.jpg" alt="Picture of Terese Mihalcin in an apple orchard" class="">
 				</div>
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-10">
 					<label class="mb-1">Projects</label>
-					<div class="d-flex gap-4 flex-wrap">
-						<div class="card">
-							<h2>Lunker Recordings</h2>
-							<hr>
-							<p>Independent record label website</p>
-							<ul class="list-inline list-unstyled">
-								<li>React</li>
-								<li>HTML/CSS</li>
-								<li>Bootstrap</li>
-								
-							</ul>
-							<a href="https://lunker-recordings.com" target="_blank">lunker-recordings.com</a>
+					<div class="d-flex gap-4 flex-nowrap expander-container">
+						<div class="card project" id="expandContent" onclick="expand('expandInfo','expandContent')">
+							<h2 id="expandH2" class="expander-inactive">Lunker Recordings</h2>
+							<!-- display on click -->
+							<div class="d-flex gap-4 info expander-invisible" id="expandInfo"> 
+								<div>
+									<p class="mb-2"><a href="https://lunker-recordings.com" target="_blank">lunker-recordings.com</a></p>
+									<p>Independent record label website. This was an early web project for dad. He requested a website for his record label, so i built it and used it as practice for my react skills!</p>
+								</div>
+								<ul>
+									<li>React</li>
+									<li>HTML/CSS</li>
+									<li>Bootstrap</li>
+								</ul>
+							</div>
 						</div>
-						<div class="card">
-							<h2>Wedding Website</h2>
-							<hr>
-							<p>Wedding website for my partner and I</p>
-							<ul class="list-inline list-unstyled">
-								<li>React</li>
-								<li>Bootstrap</li>
-								<li>HTML/CSS</li>
-							</ul>
-							<a href="https://tereseandlizzy.love" target="_blank">tereseandlizzy.love</a>
+						<!-- Good codepen for what i need https://codepen.io/AllOfTheD/pen/AZRqXV -->
+						<div class="card project" id="expandContent2" onclick="expand('expandInfo2','expandContent2')">
+							<h2 id="expandH22" class="expander-inactive">Wedding Website</h2>
+							<!-- display on click -->
+								<div class=" d-flex gap-4 info expander-invisible" id="expandInfo2"> 
+									<div>
+										<p><a href="https://tereseandlizzy.love" target="_blank">tereseandlizzy.love</a></p>
+										<p>Wedding website for my partner and I. General wedding template including an rsvp form, registry, time/location info, and image gallery.</p>
+									</div>
+									<ul>
+										<li>React</li>
+										<li>Bootstrap</li>
+										<li>HTML/CSS</li>
+									</ul>
+								</div>
 						</div>
-						<div class="card">
-							<h2>My Blog</h2>
-							<hr>
-							<p>My personal blog website, using obsidian for content and markdown file organization</p>
-							<ul class="list-inline list-unstyled">
-								<li>Astro</li>
-								<li>Obsidian</li>
-								<li>Javascript</li>
-								<li>Bootstrap</li>
-								<li>HTML/CSS</li>
-							</ul>
-							<a href="https://blog.teresemihalcin.com" target="_blank">blog.teresemihalcin.com</a>
+						<div class="card project" id="expandContent3" onclick="expand('expandInfo3','expandContent3')">
+							<h2 id="expandH23" class="expander-inactive">My Blog</h2>
+								<!-- display on click -->
+							<div class=" d-flex gap-4 info expander-invisible" id="expandInfo3"> 
+								<div>
+									<p><a href="https://blog.teresemihalcin.com" target="_blank">blog.teresemihalcin.com</a></p>
+									<p>My personal blog website, using obsidian for content and markdown file organization</p>
+								</div>
+								<ul>
+									<li>Astro</li>
+									<li>Obsidian</li>
+									<li>Javascript</li>
+									<li>Bootstrap</li>
+									<li>HTML/CSS</li>
+								</ul>
+							</div>
 						</div>
-						<div class="card">
-							<h2>Weird Web October 2025</h2>
-							<hr>
-							<p>Collection of websites made for a webtober event (inspired by inktober)</p>
-							<ul class="list-inline list-unstyled">
-								<li>Astro</li>
-								<li>Javascript</li>
-								<li>Bootstrap</li>
-								<li>HTML/CSS</li>
-							</ul>
-							<a href="https://webtobr.netlify.app" target="_blank">webtobr.netlify.app</a>
+						<div class="card project" id="expandContent4" onclick="expand('expandInfo4','expandContent4','expandH24')">
+							<h2 id="expandH2" class="expander-inactive">Weird Web October 2025</h2>
+								<!-- display on click -->
+							<div class="d-flex gap-4 info expander-invisible" id="expandInfo4"> 
+								<div>
+									<p><a href="https://webtobr.netlify.app" target="_blank">webtobr.netlify.app</a></p>
+									<p>Collection of websites made for a webtober event (inspired by inktober)</p>
+								</div>
+								<ul>
+									<li>Astro</li>
+									<li>Javascript</li>
+									<li>Bootstrap</li>
+									<li>HTML/CSS</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -133,10 +149,27 @@ import '../styles/global.css';
 				padding: 1rem;
 				background: #ede27c;
 				border: 0px;
-				width: 15rem;
+				width:100%;
+				height: 100px;
+				cursor:pointer;
+				transition: all 0.4s;
+			}
+
+			.card-expanded {
+				border-radius: 1rem;
+				padding: 1rem;
+				background: #ede27c;
+				border: 0px;
+				width:300%;
+				height: 300px;
+				margin-top:0;
+				cursor:pointer;
+				transition: all 0.4s;
+				min-width: 0;
 			}
 			img {
 				border: 15px solid var(--light-box);
+				transition: all 0.4s;
 			}
         }
         body.dark {
@@ -148,15 +181,31 @@ import '../styles/global.css';
 				padding: 1rem;
 				background: #555;
 				border: 0px;
-				width: 15rem;
+				width:100%;
+				height: 100px;
+				cursor:pointer;
+				transition: all 0.4s;
+			}
+
+			.card-expanded {
+				border-radius: 1rem;
+				padding: 1rem;
+				background: #555;
+				border: 0px;
+				width:300%;
+				height: 300px;
+				margin-top:0;
+				cursor:pointer;
+				transition: all 0.4s;
+				min-width: 0;
 			}
 			img {
 				border: 15px solid var(--dark-box);
+				transition: all 0.4s;
 			}
         }
 		a {
 			color: inherit;
-			text-decoration-style: dotted;
 		}
 		body h1 {
 			font-family: 'Geo';
@@ -165,8 +214,9 @@ import '../styles/global.css';
 		}
 		body h2 {
 			font-family: 'Geo';
-			font-size: 2em;
+			font-size: 1.5em;
 			font-weight: 700;
+			margin: unset;
 		}
 		body p {
 			font-family: 'Inter', sans-serif;
@@ -191,14 +241,25 @@ import '../styles/global.css';
 			max-height: 250px;
 		}
 
+		.transition-background {
+			transition: all 0.4s;
+		}
+
+		.info ul {
+			list-style-type: square;
+		}
+
 	</style>
-		<script type="text/javascript">
+	<script type="text/javascript">
+
 		const toggleButton = document.getElementById('theme-toggle');
 		const body = document.body;
 
 		body.classList.add('dark');
 
 		toggleButton.addEventListener('click', () => {
+			// add transition, switch dark/light, change icon
+			body.classList.add("transition-background");
 			if (body.classList.contains('light')) {
 				body.classList.replace('light', 'dark');
 				toggleButton.classList.replace('dinkie-icons--crescent-moon', 'dinkie-icons--black-sun-with-rays');
@@ -207,5 +268,69 @@ import '../styles/global.css';
 				toggleButton.classList.replace('dinkie-icons--black-sun-with-rays', 'dinkie-icons--crescent-moon');
 			}
 		});
+
+		// Card Expander Function
+
+		function expand(content,heading) {
+		
+			var expandContent = document.getElementById(content);
+			
+			if (expandContent.className.includes('expander-visible') != true){
+
+				// set info to display after .4s
+
+				// open on click
+				expandContent.classList.add('expander-visible');
+				expandContent.classList.remove('expander-invisible');
+
+				// close other open card
+				var allExpandables = document.getElementsByClassName('info');
+				console.log(expandContent);
+				for (var i = 0; i < allExpandables.length; i++) {
+					console.log(allExpandables[i]);
+					if(expandContent === allExpandables[i]) {
+						// do nothing
+					} else {
+						allExpandables[i].classList.add('expander-invisible');
+						allExpandables[i].classList.remove('expander-visible');
+					}
+					
+				}
+			} else {
+
+				// close on click
+				expandContent.classList.add('expander-invisible');
+				expandContent.classList.remove('expander-visible');
+			
+			}
+		
+			var expandHeading = document.getElementById(heading);
+				
+			if (expandHeading.className.includes('card-expanded') != true){
+			
+				// open on click
+				expandHeading.classList.add('card-expanded'); //Show Div
+				expandHeading.classList.remove('card');
+
+				// close other open cards
+			var allExpandables = document.getElementsByClassName('project');
+			for (var i = 0; i < allExpandables.length; i++) {
+				if(expandHeading === allExpandables[i]) {
+					// do nothing
+				} else {
+					allExpandables[i].classList.add('card');
+					allExpandables[i].classList.remove('card-expanded'); 
+				}
+				
+			}
+			
+			} else {
+			
+				expandHeading.classList.add('card'); //Hide Div
+				expandHeading.classList.remove('card-expanded');
+			
+			}
+				
+		}
 	</script>
 </html>

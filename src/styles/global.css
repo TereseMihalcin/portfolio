@@ -149,10 +149,53 @@
   [data-tooltip][data-flow^="right"]:hover::after {
     animation: data-tooltips-horz 300ms ease-out forwards;
   }
+
+  /*Expander CSS*/
+  .expander-container {
+    margin: 0 auto;
+    overflow: hidden;
+    display:inline-block;
+  }
+
+/* .card {
+    transition: all 0.4s;
+    overflow:hidden;
+    cursor:pointer;
+  } */
+
+/* .card-expanded {
+    width:100%;
+    height:100%;
+    margin-top:0;
+    text-align:center;
+    transition: all .4s;
+    overflow:hidden;
+    cursor:pointer;
+  } */
+
   
+.expander-visible {
+  opacity: 1;
+  height: auto;
+  transition: all .4s;
+}
+
+.expander-invisible {
+  opacity: 0;
+  transition: all .4s;
+  display: none !important; /* because the link was still clickable at 0 opactiy, may leave this or change later */
+}
+
+
   
+h2.expander-active {
+  transition: all 0.4s;
+}
   
-  
+h2.expander-inactive {
+  font-weight:normal;
+  transition: all 0.4s;
+}
   
   
 
