@@ -20,7 +20,7 @@ import '../styles/global.css';
 	</head>
 	<body class="">
 		<div class="container mt-3">
-			<div class="row justify-content-left mb-1">
+			<div class="row justify-content-left mb-2">
 				<div class="col-6 offset-1">
 					<span class="devicon devicon--php"></span>
 					<span class="devicon devicon--linux"></span>
@@ -30,19 +30,19 @@ import '../styles/global.css';
 					<span class="devicon devicon--css3"></span>
 					<span class="devicon devicon--javascript"></span>
 				</div>
-				<div class="col-2 offset-3">
+				<div class="col-4 text-end">
 					<a href="#" data-tooltip="change theme" data-flow="right"><div class='dinkie-icons--black-sun-with-rays' id="theme-toggle"></div></a>
 				</div>
 			</div>
-			<div class="row justify-content-left">
-				<div class="col-6 offset-1">
+			<div class="row">
+				<div class="col-10 offset-1 clearfix">
+					<img src="/real-me.jpg" alt="Picture of Terese Mihalcin in an apple orchard" class="col-md-6 float-md-end mt-1 mb-3 ms-md-3">
 					<h1>Terese Mihalcin</h1>
 					<label>Software Developer, Web Enthusiast</label>
-					<p>Hi there, I'm a software developer, working at a small software company building websites and software applications for newspapers and media companies. I collaborate with a small team to improve and expand our CMS and supporting apps. I am passionate about learning modern development strategies, and building new projects in my free time.</p>
+					<p>Hi there, I'm a software developer, working at a small software company building websites and software applications for newspapers and media companies. I collaborate with a small team to improve and expand our CMS and supporting apps. I am passionate about learning modern development strategies, and building new projects in my free time.</p>	
+
 				</div>
-				<div class="col-4 ms-3">
-						<img src="/real-me.jpg" alt="Picture of Terese Mihalcin in an apple orchard" class="">
-				</div>
+
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-10">
@@ -116,7 +116,7 @@ import '../styles/global.css';
 				</div>
 			</div>
 			<div class="row justify-content-left mt-3">
-				<div class="col-6 offset-1">
+				<div class="col-11 offset-1">
 					<a href="https://www.linkedin.com/in/teresemihalcin" target="_blank" data-tooltip="Check out my LinkedIn!" data-flow="down"><span class="streamline-pixel--logo-linkedin"></span></a>
 					<a href="https://github.com/teresemihalcin" target="_blank" data-tooltip="See my GitHub projects!" data-flow="down"><span class="pixel--github"></span></a>
 					<a href="https://blog.teresemihalcin.com" target="_blank" data-tooltip="Get to know me more at my blog!" data-flow="down"><span class="streamline-pixel--internet-network-www"></span></a>
@@ -150,9 +150,14 @@ import '../styles/global.css';
 				background: #ede27c;
 				border: 0px;
 				width:100%;
-				height: 100px;
+				height: 90px;
 				cursor:pointer;
 				transition: all 0.4s;
+			}
+			@media screen and (max-width: 990px) {
+				.expander-container {
+					flex-wrap: wrap !important;
+				}
 			}
 
 			.card-expanded {
@@ -166,6 +171,7 @@ import '../styles/global.css';
 				cursor:pointer;
 				transition: all 0.4s;
 				min-width: 0;
+				overflow: auto;
 			}
 			img {
 				border: 15px solid var(--light-box);
@@ -182,9 +188,14 @@ import '../styles/global.css';
 				background: #555;
 				border: 0px;
 				width:100%;
-				height: 100px;
+				height: 90px;
 				cursor:pointer;
 				transition: all 0.4s;
+			}
+			@media screen and (max-width: 990px) {
+				.expander-container {
+					flex-wrap: wrap !important;
+				}
 			}
 
 			.card-expanded {
@@ -198,12 +209,33 @@ import '../styles/global.css';
 				cursor:pointer;
 				transition: all 0.4s;
 				min-width: 0;
+				overflow: auto;  /* not sure i wanna leave this here since it makes the scroll bar flash when clicked */ 
 			}
 			img {
 				border: 15px solid var(--dark-box);
 				transition: all 0.4s;
 			}
         }
+		
+		/*Expander CSS*/
+		.expander-container {
+			margin: 0 auto;
+			overflow: hidden;
+			display:inline-block;
+		}
+
+		
+		.expander-visible {
+			opacity: 1;
+			height: auto;
+			transition: all .4s;
+		}
+
+		.expander-invisible {
+			opacity: 0;
+			transition: all .4s;
+			display: none !important; /* because the link was still clickable at 0 opactiy, may leave this or change later */
+		}
 		a {
 			color: inherit;
 		}
@@ -236,9 +268,9 @@ import '../styles/global.css';
 			margin-bottom: 10px;
 		}
 		img {
-			max-width: 100%; 
+			max-width: 200px; 
+			height: auto;
 			border-radius: 1rem;
-			max-height: 250px;
 		}
 
 		.transition-background {
@@ -282,7 +314,7 @@ import '../styles/global.css';
 
 				// close other open card
 				var allExpandables = document.getElementsByClassName('info');
-				console.log(expandContent);
+
 				for (var i = 0; i < allExpandables.length; i++) {
 					console.log(allExpandables[i]);
 					if(expandContent === allExpandables[i]) {
@@ -301,11 +333,14 @@ import '../styles/global.css';
 		
 			var expandHeading = document.getElementById(heading);
 			if (expandHeading.className.includes('card-expanded') != true){
+
 				// open on click
 				expandHeading.classList.add('card-expanded'); //Show Div
 				expandHeading.classList.remove('card');
+
 				// close other open cards
 				var allExpandables = document.getElementsByClassName('project');
+
 				for (var i = 0; i < allExpandables.length; i++) {
 					if(expandHeading === allExpandables[i]) {
 						// do nothing
