@@ -197,6 +197,11 @@ import '../styles/global.css';
 					flex-wrap: wrap !important;
 				}
 			}
+			@media screen and (max-width: 1199px) {
+				.card-expanded {
+					overflow: auto;
+				}
+			}
 
 			.card-expanded {
 				border-radius: 1rem;
@@ -209,14 +214,13 @@ import '../styles/global.css';
 				cursor:pointer;
 				transition: all 0.4s;
 				min-width: 0;
-				overflow: auto;  /* not sure i wanna leave this here since it makes the scroll bar flash when clicked */ 
 			}
 			img {
 				border: 15px solid var(--dark-box);
 				transition: all 0.4s;
 			}
         }
-		
+
 		/*Expander CSS*/
 		.expander-container {
 			margin: 0 auto;
