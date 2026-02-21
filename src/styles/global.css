@@ -154,6 +154,70 @@ h2.expander-inactive {
   font-weight:normal;
   transition: all 0.4s;
 }
+
+/*Expander CSS*/
+.expander-container {
+  margin: 0 auto;
+  overflow: hidden;
+  display:inline-block;
+}
+
+.expander-visible {
+  opacity: 1;
+  height: auto;
+  transition: all .4s;
+}
+
+.expander-invisible {
+  opacity: 0;
+  transition: all .4s;
+  display: none !important; /* because the link was still clickable at 0 opactiy, may leave this or change later */
+}
+a, a:hover {
+  color: inherit;
+}
+body h1 {
+  font-family: 'Geo';
+  font-size: 3em;
+  font-weight: 700;
+}
+body h2 {
+  font-family: 'Geo';
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: unset;
+}
+body p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1em;
+}
+label {
+  color: var(--accent);
+  font-weight:bold;
+}
+.devicon {
+  max-height: 20px;
+}
+.card > hr {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+img {
+  max-width: 200px; 
+  height: auto;
+  border-radius: 1rem;
+}
+
+.transition-background {
+  transition: all 0.4s;
+}
+
+.info ul {
+  list-style-type: none;
+  text-align: right;
+}
   
 /* iconify svgs */
 .streamline-pixel--logo-linkedin {
