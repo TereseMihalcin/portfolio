@@ -1,0 +1,31 @@
+---
+import type { arrayOutputType } from 'astro:schema';
+
+interface Props {
+    id: number;
+    title: string;
+    description?: string;
+    tools: string[];
+    link: string;
+    linkname: string;
+}
+
+const { id, title, description, tools, link, linkname } = Astro.props;
+---
+<div 
+  class="card project" 
+  id={`expandContent${id}`} 
+  onclick={`expand('expandInfo${id}', 'expandContent${id}')`}
+>
+    <h2 id={`expandH2${id}`} class="expander-inactive">{title}</h2>
+        <!-- display on click -->
+    <div class={`d-flex gap-4 info expander-invisible" expandContent${id}`} > 
+        <div>
+            <p><a href={link} target="_blank">{linkname}</a></p>
+            <p>{description}</p>
+        </div>
+        <ul>
+            {tools.map(link => <li>{link}</li>)}
+          </ul>
+    </div>
+</div>
