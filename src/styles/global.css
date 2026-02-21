@@ -215,7 +215,8 @@ img {
 }
 
 .info ul {
-  list-style-type: square;
+  list-style-type: none;
+  text-align: right;
 }
   
 /* iconify svgs */

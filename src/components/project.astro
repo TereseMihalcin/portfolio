@@ -6,14 +6,13 @@ import projectsData from '../data/project.json';
 {projectsData.map((project: Project) => (
   <div class="card project" id={`expandContent${project.id}`} onclick={`expand('expandInfo${project.id}', 'expandContent${project.id}')`}>
     <h2 id={`expandH2${project.id}`} class="expander-inactive">{project.title}</h2>
-    <div class="d-flex gap-4 info expander-invisible" id={`expandInfo${project.id}`} >
-        <div>
-            <p><a href={project.link} target="_blank">{project.linkname}</a></p>
+    <div class="d-flex flex-column gap-1 info expander-invisible" id={`expandInfo${project.id}`} >
+        <p><a href={project.link} target="_blank">{project.linkname}</a></p>
+        <div class="d-flex gap-2">
             <p>{project.description}</p>
+            <ul>{project.tools.map((tool: string) => <li>{tool}</li>)}</ul>
         </div>
-        <ul>
-            {project.tools.map((tool: string) => <li>{tool}</li>)}
-        </ul>
+       
     </div>
   </div>
 ))}
