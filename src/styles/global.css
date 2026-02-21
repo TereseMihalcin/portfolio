@@ -173,7 +173,7 @@ h2.expander-inactive {
   transition: all .4s;
   display: none !important; /* because the link was still clickable at 0 opactiy, may leave this or change later */
 }
-a {
+a, a:hover {
   color: inherit;
 }
 body h1 {
