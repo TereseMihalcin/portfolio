@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Project from '../components/project.astro';
 ---
 
 <html lang="en">
@@ -47,70 +48,7 @@ import '../styles/global.css';
 				<div class="col-10">
 					<label class="mb-1">Projects</label>
 					<div class="d-flex gap-4 flex-nowrap expander-container">
-						<div class="card project" id="expandContent" onclick="expand('expandInfo','expandContent')">
-							<h2 id="expandH2" class="expander-inactive">Lunker Recordings</h2>
-							<!-- display on click -->
-							<div class="d-flex gap-4 info expander-invisible" id="expandInfo"> 
-								<div>
-									<p class="mb-2"><a href="https://lunker-recordings.com" target="_blank">lunker-recordings.com</a></p>
-									<p>Independent record label website. This was an early web project for dad. He requested a website for his record label, so i built it and used it as practice for my react skills!</p>
-								</div>
-								<ul>
-									<li>React</li>
-									<li>HTML/CSS</li>
-									<li>Bootstrap</li>
-								</ul>
-							</div>
-						</div>
-						<!-- Good codepen for what i need https://codepen.io/AllOfTheD/pen/AZRqXV -->
-						<div class="card project" id="expandContent2" onclick="expand('expandInfo2','expandContent2')">
-							<h2 id="expandH22" class="expander-inactive">Wedding Website</h2>
-							<!-- display on click -->
-								<div class=" d-flex gap-4 info expander-invisible" id="expandInfo2"> 
-									<div>
-										<p><a href="https://tereseandlizzy.love" target="_blank">tereseandlizzy.love</a></p>
-										<p>Wedding website for my partner and I. General wedding template including an rsvp form, registry, time/location info, and image gallery.</p>
-									</div>
-									<ul>
-										<li>React</li>
-										<li>Bootstrap</li>
-										<li>HTML/CSS</li>
-									</ul>
-								</div>
-						</div>
-						<div class="card project" id="expandContent3" onclick="expand('expandInfo3','expandContent3')">
-							<h2 id="expandH23" class="expander-inactive">My Blog</h2>
-								<!-- display on click -->
-							<div class=" d-flex gap-4 info expander-invisible" id="expandInfo3"> 
-								<div>
-									<p><a href="https://blog.teresemihalcin.com" target="_blank">blog.teresemihalcin.com</a></p>
-									<p>My personal blog website, using obsidian for content and markdown file organization</p>
-								</div>
-								<ul>
-									<li>Astro</li>
-									<li>Obsidian</li>
-									<li>Javascript</li>
-									<li>Bootstrap</li>
-									<li>HTML/CSS</li>
-								</ul>
-							</div>
-						</div>
-						<div class="card project" id="expandContent4" onclick="expand('expandInfo4','expandContent4','expandH24')">
-							<h2 id="expandH2" class="expander-inactive">Weird Web October 2025</h2>
-								<!-- display on click -->
-							<div class="d-flex gap-4 info expander-invisible" id="expandInfo4"> 
-								<div>
-									<p><a href="https://webtobr.netlify.app" target="_blank">webtobr.netlify.app</a></p>
-									<p>Collection of websites made for a webtober event (inspired by inktober)</p>
-								</div>
-								<ul>
-									<li>Astro</li>
-									<li>Javascript</li>
-									<li>Bootstrap</li>
-									<li>HTML/CSS</li>
-								</ul>
-							</div>
-						</div>
+					<Project />
 					</div>
 				</div>
 			</div>
@@ -220,69 +158,7 @@ import '../styles/global.css';
 			}
         }
 
-		/*Expander CSS*/
-		.expander-container {
-			margin: 0 auto;
-			overflow: hidden;
-			display:inline-block;
-		}
-
 		
-		.expander-visible {
-			opacity: 1;
-			height: auto;
-			transition: all .4s;
-		}
-
-		.expander-invisible {
-			opacity: 0;
-			transition: all .4s;
-			display: none !important; /* because the link was still clickable at 0 opactiy, may leave this or change later */
-		}
-		a {
-			color: inherit;
-		}
-		body h1 {
-			font-family: 'Geo';
-			font-size: 3em;
-			font-weight: 700;
-		}
-		body h2 {
-			font-family: 'Geo';
-			font-size: 1.5em;
-			font-weight: 700;
-			margin: unset;
-		}
-		body p {
-			font-family: 'Inter', sans-serif;
-			font-size: 1.1em;
-		}
-		label {
-			color: var(--accent);
-			font-weight:bold;
-		}
-		.devicon {
-			max-height: 20px;
-		}
-		.card > hr {
-			margin-left: -15px;
-			margin-right: -15px;
-			margin-top: 0px;
-			margin-bottom: 10px;
-		}
-		img {
-			max-width: 200px; 
-			height: auto;
-			border-radius: 1rem;
-		}
-
-		.transition-background {
-			transition: all 0.4s;
-		}
-
-		.info ul {
-			list-style-type: square;
-		}
 
 	</style>
 	<script type="text/javascript">

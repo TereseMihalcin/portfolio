@@ -1,31 +1,20 @@
 ---
-import type { arrayOutputType } from 'astro:schema';
-
-interface Props {
-    id: number;
-    title: string;
-    description?: string;
-    tools: string[];
-    link: string;
-    linkname: string;
-}
-
-const { id, title, description, tools, link, linkname } = Astro.props;
+import type { Project } from '../types.ts';
+import projectsData from '../data/project.json';
 ---
-<div 
-  class="card project" 
-  id={`expandContent${id}`} 
-  onclick={`expand('expandInfo${id}', 'expandContent${id}')`}
->
-    <h2 id={`expandH2${id}`} class="expander-inactive">{title}</h2>
-        <!-- display on click -->
-    <div class={`d-flex gap-4 info expander-invisible" expandContent${id}`} > 
+
+{projectsData.map((project: Project) => (
+  <div class="card project" id={`expandContent${project.id}`} onclick={`expand('expandInfo${project.id}', 'expandContent${project.id}')`}>
+    <h2 id={`expandH2${project.id}`} class="expander-inactive">{project.title}</h2>
+    <div class="d-flex gap-4 info expander-invisible" id={`expandInfo${project.id}`} >
         <div>
-            <p><a href={link} target="_blank">{linkname}</a></p>
-            <p>{description}</p>
+            <p><a href={project.link} target="_blank">{project.linkname}</a></p>
+            <p>{project.description}</p>
         </div>
         <ul>
-            {tools.map(link => <li>{link}</li>)}
-          </ul>
+            {project.tools.map((tool: string) => <li>{tool}</li>)}
+        </ul>
     </div>
-</div>
+  </div>
+))}
+
