@@ -35,8 +35,8 @@
     padding: 1ch 1.5ch;
     border-radius: .3ch;
     box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
-    background: #444;
-    color: #fff;
+    background: var(--less-dark);
+    color: white;
     z-index: 1000; /* absurdity 2 */
   }
   
@@ -232,7 +232,7 @@ img {
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
-    color:#6571e9;
+    color:var(--accent);
     }
 
     .streamline-pixel--internet-network-www {
@@ -247,7 +247,7 @@ img {
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
-    color:#6571e9;
+    color:var(--accent);
     }
 
     .pixel--github {
@@ -262,7 +262,7 @@ img {
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
-    color:#6571e9;
+    color:var(--accent);
     }
 
     .streamline-pixel--food-drink-bread {
@@ -277,7 +277,7 @@ img {
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
-    color:#6571e9;
+    color: var(--accent);
     }
 
     .devicon--php {
