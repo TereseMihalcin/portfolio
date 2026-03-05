@@ -165,12 +165,12 @@ h2.expander-inactive {
 .expander-visible {
   opacity: 1;
   height: auto;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .expander-invisible {
   opacity: 0;
-  transition: all .4s;
+  transition: all 0.4s;
   display: none !important; /* because the link was still clickable at 0 opactiy, may leave this or change later */
 }
 a, a:hover {

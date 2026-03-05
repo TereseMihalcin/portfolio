@@ -109,7 +109,7 @@ import Project from '../components/project.astro';
 				cursor: nesw-resize;
 				transition: all 0.4s;
 				min-width: 0;
-				overflow: auto;
+				overflow: hidden;
 			}
 			img {
 				border: 15px solid var(--less-light);
@@ -155,6 +155,7 @@ import Project from '../components/project.astro';
 				cursor: nesw-resize;
 				transition: all 0.4s;
 				min-width: 0;
+				overflow: hidden;
 			}
 			img {
 				border: 15px solid var(--less-dark);
@@ -213,7 +214,6 @@ import Project from '../components/project.astro';
 				var allExpandables = document.getElementsByClassName('info');
 
 				for (var i = 0; i < allExpandables.length; i++) {
-					console.log(allExpandables[i]);
 					if(expandContent === allExpandables[i]) {
 						// do nothing
 					} else {
