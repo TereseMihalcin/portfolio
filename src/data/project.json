@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "Lunker Recordings",
-        "description": "Independent record label website. This was an early web project for dad. He requested a website for his record label, so i built it and used it as practice for my react skills!",
+        "description": "Independent record label website. This was an early web project for my dad. He requested a website for his record label, so I built it and used it as practice for my react skills!",
         "tools": ["React", "HTML/CSS", "Bootstrap"],
         "link": "https://lunker-recordings.com",
         "linkname": "lunker-recordings.com"
@@ -10,7 +10,7 @@
     {
         "id": 2,
         "title": "Wedding Website",
-        "description": "Wedding website for my partner and I. General wedding template including an rsvp form, registry, time/location info, and image gallery.",
+        "description": "Wedding website for my partner and I. This is also a solid wedding website template including an rsvp form, registry, time/location info, and image gallery.",
         "tools": ["React", "HTML/CSS", "Bootstrap"],
         "link": "https://tereseandlizzy.love",
         "linkname": "tereseandlizzy.love"
@@ -18,7 +18,7 @@
     {
         "id": 3,
         "title": "My Blog",
-        "description": "My personal blog website, using obsidian for content and markdown file organization",
+        "description": "My personal blog website, I use Obsidian to write posts, which is setup to auto generate on my site. I write about web dev, personal life, work life, etc.",
         "tools": ["Javascript","Bootstrap","HTML/CSS","Astro","Obsidian","Markdown"],
         "link": "https://blog.teresemihalcin.com",
         "linkname": "blog.teresemihalcin.com"
@@ -26,7 +26,7 @@
     {
         "id": 4,
         "title": "Weird Web October 2025",
-        "description": "Collection of websites made for a webtober event (inspired by inktober)",
+        "description": "Collection of websites made for a webtober event (inspired by inktober). Showcases many javascript techniques and creative ideas for future projects",
         "tools": ["Javascript","Bootstrap","HTML/CSS","Astro"],
         "link": "https://webtobr.netlify.app",
         "linkname": "webtobr.netlify.app"
