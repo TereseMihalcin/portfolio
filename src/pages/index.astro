@@ -37,7 +37,7 @@ import Project from '../components/project.astro';
 			</div>
 			<div class="row">
 				<div class="col-10 offset-1 clearfix">
-					<img src="/real-me.jpg" alt="Picture of Terese Mihalcin in an apple orchard" class="col-md-6 float-md-end mt-1 mb-3 ms-md-3">
+					<img src="/real-me.jpg" alt="Picture of Terese Mihalcin in an apple orchard" id="pfp" class="col-md-6 float-md-end mt-1 mb-3 ms-md-3">
 					<h1>Terese Mihalcin</h1>
 					<label>Software Developer, Web Enthusiast</label>
 					<p>Hi there, I'm a software developer, working at a small company, building websites and software applications for newspapers and media companies. I collaborate with a small team to improve and expand our CMS and supporting apps. I am passionate about learning modern development strategies, and building new projects in my free time.</p>	
@@ -86,7 +86,7 @@ import Project from '../components/project.astro';
 				padding: 1rem;
 				background: #ede27c;
 				border: 0px;
-				width:100%;
+				width: 100%;
 				height: 90px;
 				cursor: nesw-resize;
 				transition: all 0.4s;
@@ -104,7 +104,7 @@ import Project from '../components/project.astro';
 				border: 0px;
 				width:300%;
 				height: 300px;
-				margin-top:0;
+				margin-top: 0;
 				cursor: nesw-resize;
 				transition: all 0.4s;
 				min-width: 0;
@@ -165,12 +165,20 @@ import Project from '../components/project.astro';
 
 		const toggleButton = document.getElementById('theme-toggle');
 		const body = document.body;
+		const cards = document.getElementsByClassName('project');
+		const img = document.getElementById('pfp');
 
 		body.classList.add('dark');
 
 		toggleButton.addEventListener('click', () => {
-			// add transition, switch dark/light, change icon
-			body.classList.add("transition-background");
+
+			// add transition class to elements, switch dark/light
+			body.classList.add("transition");
+			img.classList.add("transition");
+			for(let i = 0; i < cards.length; i++) {
+				cards[i].classList.add("transition");
+			}
+			// change icon
 			if (body.classList.contains('light')) {
 				body.classList.replace('light', 'dark');
 				toggleButton.classList.replace('dinkie-icons--crescent-moon', 'dinkie-icons--black-sun-with-rays');
@@ -181,7 +189,6 @@ import Project from '../components/project.astro';
 		});
 
 		// Card Expander Function
-
 		function expand(content,heading) {
 		
 			var expandContent = document.getElementById(content);

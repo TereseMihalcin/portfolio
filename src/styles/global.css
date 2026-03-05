@@ -210,7 +210,7 @@ img {
   border-radius: 1rem;
 }
 
-.transition-background {
+.transition {
   transition: all 0.4s;
 }
 
