@@ -26,7 +26,7 @@
     {
         "id": 4,
         "title": "Weird Web October 2025",
-        "description": "Collection of websites made for a webtober event (inspired by inktober). Showcases many javascript techniques and creative ideas for future projects",
+        "description": "Collection of websites made for a webtober event (inspired by inktober). Showcases many custom javascript techniques and creative ideas for future projects",
         "tools": ["Javascript","Bootstrap","HTML/CSS","Astro"],
         "link": "https://webtobr.netlify.app",
         "linkname": "webtobr.netlify.app"
