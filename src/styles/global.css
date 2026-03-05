@@ -219,6 +219,9 @@ img {
   text-align: right;
   font-weight: bold;
 }
+.info ul li {
+  white-space: nowrap;
+}
 .info p a {
   color: var(--accent);
 }

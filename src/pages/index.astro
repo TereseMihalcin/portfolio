@@ -97,6 +97,11 @@ import Project from '../components/project.astro';
 					flex-wrap: wrap !important;
 				}
 			}
+			@media screen and (max-width: 1199px) {
+				div.card-expanded {
+					overflow: auto;
+				}
+			}
 
 			.card-expanded {
 				border-radius: 1rem;
@@ -139,7 +144,7 @@ import Project from '../components/project.astro';
 				}
 			}
 			@media screen and (max-width: 1199px) {
-				.card-expanded {
+				div.card-expanded {
 					overflow: auto;
 				}
 			}

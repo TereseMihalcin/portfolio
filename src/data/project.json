@@ -19,7 +19,7 @@
         "id": 3,
         "title": "My Blog",
         "description": "My personal blog website, using obsidian for content and markdown file organization",
-        "tools": ["Astro","Obsidian","Javascript","Bootstrap","HTML/CSS"],
+        "tools": ["Javascript","Bootstrap","HTML/CSS","Astro","Obsidian","Markdown"],
         "link": "https://blog.teresemihalcin.com",
         "linkname": "blog.teresemihalcin.com"
     },
@@ -27,7 +27,7 @@
         "id": 4,
         "title": "Weird Web October 2025",
         "description": "Collection of websites made for a webtober event (inspired by inktober)",
-        "tools": ["Astro","Javascript","Bootstrap","HTML/CSS"],
+        "tools": ["Javascript","Bootstrap","HTML/CSS","Astro"],
         "link": "https://webtobr.netlify.app",
         "linkname": "webtobr.netlify.app"
     }  
