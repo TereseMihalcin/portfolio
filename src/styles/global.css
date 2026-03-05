@@ -217,7 +217,12 @@ img {
 .info ul {
   list-style-type: none;
   text-align: right;
+  font-weight: bold;
 }
+.info p a {
+  color: var(--accent);
+}
+
   
 /* iconify svgs */
 .streamline-pixel--logo-linkedin {

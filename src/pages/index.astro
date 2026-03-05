@@ -113,7 +113,10 @@ import Project from '../components/project.astro';
 			}
 			img {
 				border: 15px solid var(--less-light);
-				transition: all 0.4s;
+			}
+			p.desc {
+				background: #c1dd9a;
+				border-radius: 1rem;
 			}
         }
         body.dark {
@@ -155,7 +158,10 @@ import Project from '../components/project.astro';
 			}
 			img {
 				border: 15px solid var(--less-dark);
-				transition: all 0.4s;
+			}
+			p.desc {
+				background: #323d4d;
+				border-radius: 1rem;
 			}
         }
 
@@ -168,6 +174,7 @@ import Project from '../components/project.astro';
 		const body = document.body;
 		const cards = document.getElementsByClassName('project');
 		const img = document.getElementById('pfp');
+		const desc = document.getElementsByClassName('desc');
 
 		body.classList.add('dark');
 
@@ -178,6 +185,9 @@ import Project from '../components/project.astro';
 			img.classList.add("transition");
 			for(let i = 0; i < cards.length; i++) {
 				cards[i].classList.add("transition");
+			}
+			for(let i = 0; i < desc.length; i++) {
+				desc[i].classList.add("transition");
 			}
 			// change icon
 			if (body.classList.contains('light')) {
